@@ -6,76 +6,42 @@
 classDiagram
     class User {
         +String userId
-        +String name
         +String email
-        +String phone
+        +String password
         +DateTime createdAt
         +registerUser()
-        +updateProfile()
-        +getChildren()
     }
 
     class Child {
         +String childId
-        +String userId
+        +String parentId
         +String name
-        +Date birthDate
+        +int age
         +String gender
-        +String schoolGrade
         +getAssessments()
-        +getCurrentPlan()
-        +getProgress()
     }
 
     class Assessment {
         +String assessmentId
         +String childId
         +DateTime date
-        +int totalScore
-        +String status
-        +calculateScore()
-        +generateReport()
-        +getAnswers()
+        +String assessorType
+        +calculateScores()
+        +generateRecommendations()
     }
 
-    class TreatmentPlan {
-        +String planId
-        +String childId
-        +Date startDate
-        +Date endDate
-        +String status
-        +getActivities()
-        +updateStatus()
-        +trackProgress()
-    }
-
-    class Activity {
-        +String activityId
-        +String planId
-        +String name
-        +String description
-        +int duration
-        +String frequency
-        +String status
-        +markComplete()
-        +addProgress()
-    }
-
-    class Report {
-        +String reportId
-        +String childId
-        +String type
-        +DateTime date
-        +generatePDF()
-        +share()
+    class Result {
+        +String resultId
+        +String assessmentId
+        +String category
+        +int rawScore
+        +int tScore
+        +String interpretation
     }
 
     User "1" -- "*" Child
     Child "1" -- "*" Assessment
-    Child "1" -- "1" TreatmentPlan
-    TreatmentPlan "1" -- "*" Activity
-    Child "1" -- "*" Report
-```
+    Assessment "1" -- "*" Result
 
 ## Use Case Diagram
 
@@ -93,6 +59,13 @@ graph TD
     A -->|View| K(Historical Data)
     A -->|Manage| L(Settings)
 ```
+graph TD
+    A[Parent/Teacher] -->|Register| B(Create Account)
+    A -->|Login| C(Access Dashboard)
+    C -->|Start Assessment| D(Answer Questions)
+    D -->|Submit| E(Calculate Results)
+    E -->|View| F(Analysis & Recommendations)
+    F -->|Track Progress| G(Compare Results Over Time)
 
 ## Sequence Diagram - Assessment Flow
 

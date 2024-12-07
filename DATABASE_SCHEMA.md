@@ -3,7 +3,6 @@
 ## الجداول الرئيسية
 
 ### جدول المستخدمين (users)
-```sql
 CREATE TABLE users (
     id TEXT PRIMARY KEY,
     email TEXT UNIQUE,
@@ -11,20 +10,16 @@ CREATE TABLE users (
     user_type TEXT NOT NULL, -- parent/specialist
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-```
 
 ### جدول الوالدين (parents)
-```sql
 CREATE TABLE parents (
     id TEXT PRIMARY KEY,
     user_id TEXT,
     name TEXT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
-```
 
 ### جدول المتخصصين (specialists)
-```sql
 CREATE TABLE specialists (
     id TEXT PRIMARY KEY,
     user_id TEXT,
@@ -32,10 +27,8 @@ CREATE TABLE specialists (
     specialization TEXT,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
-```
 
 ### جدول الأطفال (children)
-```sql
 CREATE TABLE children (
     id TEXT PRIMARY KEY,
     parent_id TEXT NOT NULL,
@@ -47,23 +40,39 @@ CREATE TABLE children (
     FOREIGN KEY (parent_id) REFERENCES parents(id),
     FOREIGN KEY (specialist_id) REFERENCES specialists(id)
 );
-```
+
+### جدول الأسئلة (assessment_questions)
+CREATE TABLE assessment_questions (
+    id TEXT PRIMARY KEY,
+    question_text TEXT NOT NULL,
+    category TEXT NOT NULL, -- مثل: Conduct, Hyperactivity, etc.
+    question_order INTEGER NOT NULL
+);
 
 ### جدول التقييمات (assessments)
-```sql
 CREATE TABLE assessments (
     id TEXT PRIMARY KEY,
     child_id TEXT NOT NULL,
+    assessor_type TEXT NOT NULL, -- parent/teacher
     date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     answers JSON NOT NULL,
     score INTEGER,
     recommendations TEXT,
     FOREIGN KEY (child_id) REFERENCES children(id)
 );
-```
+
+### جدول النتائج (assessment_results)
+CREATE TABLE assessment_results (
+    id TEXT PRIMARY KEY,
+    assessment_id TEXT NOT NULL,
+    category TEXT NOT NULL, -- Conduct, Hyperactivity, etc.
+    raw_score INTEGER NOT NULL,
+    t_score INTEGER NOT NULL,
+    interpretation TEXT,
+    FOREIGN KEY (assessment_id) REFERENCES assessments(id)
+);
 
 ### جدول الرسائل (messages)
-```sql
 CREATE TABLE messages (
     id TEXT PRIMARY KEY,
     parent_id TEXT NOT NULL,
@@ -73,23 +82,13 @@ CREATE TABLE messages (
     FOREIGN KEY (parent_id) REFERENCES parents(id),
     FOREIGN KEY (specialist_id) REFERENCES specialists(id)
 );
-```
 
 ### الفهارس الأساسية (Basic Indexes)
-```sql
 CREATE INDEX idx_users_email ON users(email);
 CREATE INDEX idx_children_parent ON children(parent_id);
 CREATE INDEX idx_children_specialist ON children(specialist_id);
 CREATE INDEX idx_assessments_child ON assessments(child_id);
 CREATE INDEX idx_messages_parent ON messages(parent_id);
 CREATE INDEX idx_messages_specialist ON messages(specialist_id);
-```
-
----
-ملاحظة: الجداول والميزات التالية ستضاف في التحديثات المستقبلية:
-- جدول المواعيد (appointments)
-- جدول خطط العلاج (treatment_plans)
-- جدول الأنشطة (activities)
-- جدول التقدم (progress)
-- جدول الإشعارات (notifications)
-- جدول المرفقات (attachments)
+CREATE INDEX idx_questions_category ON assessment_questions(category);
+CREATE INDEX idx_results_assessment ON assessment_results(assessment_id);
