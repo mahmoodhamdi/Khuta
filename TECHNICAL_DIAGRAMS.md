@@ -59,6 +59,7 @@ graph TD
     A -->|View| K(Historical Data)
     A -->|Manage| L(Settings)
 ```
+
 graph TD
     A[Parent/Teacher] -->|Register| B(Create Account)
     A -->|Login| C(Access Dashboard)
@@ -71,51 +72,32 @@ graph TD
 
 ```mermaid
 sequenceDiagram
-    participant U as User
+    participant P as Parent/Teacher
     participant A as App
     participant DB as Database
-    participant R as Report Generator
+    participant C as Calculator
 
-    U->>A: Start Assessment
+    P->>A: Start Assessment
     A->>DB: Load Questions
     DB-->>A: Return Questions
-    A->>U: Display Questions
-    U->>A: Submit Answers
-    A->>DB: Save Answers
-    A->>A: Calculate Score
+    A->>P: Display Questions
+    P->>A: Submit Answers
+    A->>C: Calculate Scores
+    C->>A: Return Results
     A->>DB: Save Results
-    A->>R: Generate Report
-    R-->>A: Return Report
-    A->>U: Display Results & Recommendations
+    A->>P: Display Analysis
 ```
 
 ## Component Diagram
 
 ```mermaid
 graph TD
-    A[UI Layer] -->|API Calls| B(Business Logic Layer)
-    B -->|Data Access| C(Data Layer)
-    B -->|Services| D(External Services)
-    
-    subgraph UI Components
-        A1[Authentication UI]
-        A2[Assessment UI]
-        A3[Dashboard UI]
-        A4[Reports UI]
-    end
-    
-    subgraph Business Logic
-        B1[Auth Service]
-        B2[Assessment Service]
-        B3[Treatment Service]
-        B4[Report Service]
-    end
-    
-    subgraph Data Layer
-        C1[Local Storage]
-        C2[SQLite Database]
-        C3[File Storage]
-    end
+    A[UI Layer] -->|User Input| B(Assessment Module)
+    B -->|Data| C(Database Layer)
+    B -->|Calculation| D(Scoring Engine)
+    D -->|Results| B
+    B -->|Display| A
+    E[Authentication] -->|Security| A
 ```
 
 ## State Diagram - Assessment Process
