@@ -9,7 +9,7 @@ CREATE TABLE users (
     id TEXT PRIMARY KEY,
     email TEXT UNIQUE NOT NULL,
     password_hash TEXT NOT NULL,
-    user_type TEXT NOT NULL CHECK (user_type IN ('parent', 'specialist')),
+    user_type TEXT NOT NULL CHECK (user_type IN ('parent', 'specialist', 'admin')),
     full_name TEXT NOT NULL,
     phone_number TEXT,
     profile_image_url TEXT,
@@ -20,54 +20,22 @@ CREATE TABLE users (
 );
 ```
 
-### جدول الوالدين (parents)
-
-```sql
-CREATE TABLE parents (
-    id TEXT PRIMARY KEY,
-    user_id TEXT NOT NULL,
-    address TEXT,
-    emergency_contact TEXT,
-    preferred_contact_method TEXT CHECK (preferred_contact_method IN ('email', 'phone', 'app')),
-    notification_settings JSON,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-);
-```
-
-### جدول المتخصصين (specialists)
-
-```sql
-CREATE TABLE specialists (
-    id TEXT PRIMARY KEY,
-    user_id TEXT NOT NULL,
-    specialization TEXT NOT NULL,
-    license_number TEXT,
-    education TEXT,
-    years_of_experience INTEGER,
-    availability_schedule JSON,
-    max_patients INTEGER,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-);
-```
-
 ### جدول الأطفال (children)
 
 ```sql
 CREATE TABLE children (
     id TEXT PRIMARY KEY,
     parent_id TEXT NOT NULL,
-    specialist_id TEXT,
     name TEXT NOT NULL,
     date_of_birth DATE NOT NULL,
     gender TEXT CHECK (gender IN ('male', 'female')),
-    school_name TEXT,
-    grade_level TEXT,
     medical_history TEXT,
-    notes TEXT,
+    current_medications TEXT,
+    allergies TEXT,
+    special_notes TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (parent_id) REFERENCES parents(id) ON DELETE CASCADE,
-    FOREIGN KEY (specialist_id) REFERENCES specialists(id) ON DELETE SET NULL
+    FOREIGN KEY (parent_id) REFERENCES users(id) ON DELETE CASCADE
 );
 ```
 
@@ -77,109 +45,112 @@ CREATE TABLE children (
 CREATE TABLE assessments (
     id TEXT PRIMARY KEY,
     child_id TEXT NOT NULL,
-    assessor_id TEXT NOT NULL,
-    assessment_type TEXT NOT NULL CHECK (assessment_type IN ('parent', 'teacher', 'self')),
-    start_time TIMESTAMP NOT NULL,
-    completion_time TIMESTAMP,
-    status TEXT CHECK (status IN ('in_progress', 'completed', 'cancelled')),
-    raw_score INTEGER,
-    t_score FLOAT,
-    percentile FLOAT,
-    ai_analysis_result JSON,
-    recommendations TEXT,
-    notes TEXT,
+    specialist_id TEXT NOT NULL,
+    assessment_type TEXT NOT NULL CHECK (assessment_type IN ('conners', 'custom')),
+    status TEXT CHECK (status IN ('in_progress', 'completed')),
+    started_at TIMESTAMP NOT NULL,
+    completed_at TIMESTAMP,
+    duration INTEGER,
     FOREIGN KEY (child_id) REFERENCES children(id) ON DELETE CASCADE,
-    FOREIGN KEY (assessor_id) REFERENCES users(id) ON DELETE CASCADE
+    FOREIGN KEY (specialist_id) REFERENCES users(id) ON DELETE CASCADE
 );
 ```
 
-### جدول أسئلة التقييم (assessment_questions)
+### جدول الأسئلة (questions)
 
 ```sql
-CREATE TABLE assessment_questions (
+CREATE TABLE questions (
     id TEXT PRIMARY KEY,
-    question_text TEXT NOT NULL,
     category TEXT NOT NULL,
-    subcategory TEXT,
-    question_order INTEGER NOT NULL,
-    scoring_weight FLOAT DEFAULT 1.0,
-    age_group TEXT,
-    is_reverse_scored BOOLEAN DEFAULT FALSE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    text TEXT NOT NULL,
+    type TEXT CHECK (type IN ('scale', 'boolean', 'text')),
+    options JSON,
+    scoring_rules JSON,
+    weight FLOAT
 );
 ```
 
-### جدول إجابات التقييم (assessment_answers)
+### جدول الإجابات (responses)
 
 ```sql
-CREATE TABLE assessment_answers (
+CREATE TABLE responses (
     id TEXT PRIMARY KEY,
     assessment_id TEXT NOT NULL,
     question_id TEXT NOT NULL,
-    answer_value INTEGER NOT NULL CHECK (answer_value BETWEEN 0 AND 3),
-    answered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    answer TEXT NOT NULL,
+    score FLOAT,
+    notes TEXT,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (assessment_id) REFERENCES assessments(id) ON DELETE CASCADE,
-    FOREIGN KEY (question_id) REFERENCES assessment_questions(id)
+    FOREIGN KEY (question_id) REFERENCES questions(id)
 );
 ```
 
-### جدول المحادثات (conversations)
+### جدول النتائج (results)
 
 ```sql
-CREATE TABLE conversations (
-    id TEXT PRIMARY KEY,
-    parent_id TEXT NOT NULL,
-    specialist_id TEXT NOT NULL,
-    child_id TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    last_message_at TIMESTAMP,
-    status TEXT CHECK (status IN ('active', 'archived', 'blocked')),
-    FOREIGN KEY (parent_id) REFERENCES parents(id),
-    FOREIGN KEY (specialist_id) REFERENCES specialists(id),
-    FOREIGN KEY (child_id) REFERENCES children(id)
-);
-```
-
-### جدول الرسائل (messages)
-
-```sql
-CREATE TABLE messages (
-    id TEXT PRIMARY KEY,
-    conversation_id TEXT NOT NULL,
-    sender_id TEXT NOT NULL,
-    message_text TEXT NOT NULL,
-    sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    read_at TIMESTAMP,
-    message_type TEXT CHECK (message_type IN ('text', 'report', 'recommendation')),
-    attachment_url TEXT,
-    FOREIGN KEY (conversation_id) REFERENCES conversations(id) ON DELETE CASCADE,
-    FOREIGN KEY (sender_id) REFERENCES users(id)
-);
-```
-
-### جدول التقارير (reports)
-
-```sql
-CREATE TABLE reports (
+CREATE TABLE results (
     id TEXT PRIMARY KEY,
     assessment_id TEXT NOT NULL,
+    total_score FLOAT NOT NULL,
+    severity_level TEXT CHECK (severity_level IN ('mild', 'moderate', 'severe')),
+    ai_analysis JSON,
+    recommendations TEXT,
     generated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    report_type TEXT CHECK (report_type IN ('summary', 'detailed', 'progress')),
-    report_data JSON,
-    recommendations JSON,
-    shared_with JSON,
     FOREIGN KEY (assessment_id) REFERENCES assessments(id) ON DELETE CASCADE
 );
 ```
 
-### الفهارس الأساسية (Basic Indexes)
+### جدول التقدم (progress)
+
+```sql
+CREATE TABLE progress (
+    id TEXT PRIMARY KEY,
+    child_id TEXT NOT NULL,
+    period TEXT NOT NULL,
+    score_change FLOAT NOT NULL,
+    improvement_areas JSON,
+    challenges JSON,
+    notes TEXT,
+    FOREIGN KEY (child_id) REFERENCES children(id) ON DELETE CASCADE
+);
+```
+
+### جدول الإعدادات (settings)
+
+```sql
+CREATE TABLE settings (
+    user_id TEXT PRIMARY KEY,
+    preferences JSON,
+    notifications JSON,
+    theme TEXT,
+    system_settings JSON,
+    ai_parameters JSON,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+```
+
+### جدول السجلات (logs)
+
+```sql
+CREATE TABLE logs (
+    id TEXT PRIMARY KEY,
+    user_id TEXT NOT NULL,
+    action TEXT NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    details JSON,
+    ip_address TEXT,
+    user_agent TEXT,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+```
+
+## الفهارس الأساسية (Basic Indexes)
 
 CREATE INDEX idx_users_email ON users(email);
 CREATE INDEX idx_children_parent ON children(parent_id);
-CREATE INDEX idx_children_specialist ON children(specialist_id);
 CREATE INDEX idx_assessments_child ON assessments(child_id);
-CREATE INDEX idx_messages_parent ON messages(conversation_id);
-CREATE INDEX idx_messages_specialist ON messages(conversation_id);
-CREATE INDEX idx_questions_category ON assessment_questions(category);
-CREATE INDEX idx_results_assessment ON assessment_answers(assessment_id);
+CREATE INDEX idx_responses_assessment ON responses(assessment_id);
+CREATE INDEX idx_results_assessment ON results(assessment_id);
+CREATE INDEX idx_questions_category ON questions(category);
