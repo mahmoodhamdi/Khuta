@@ -1,150 +1,169 @@
-# دورة حياة تطوير البرمجيات (SDLC) لمشروع "خُطى"
+# دورة حياة تطوير البرمجيات لمشروع "خُطى" | Software Development Life Cycle for "Khuta"
 
-## 1. مرحلة التخطيط والتحليل
+## 1. مرحلة التخطيط والتحليل | Planning and Analysis Phase
 
-### المتطلبات الوظيفية
+### المتطلبات الوظيفية | Functional Requirements
 
-1. **نظام المستخدمين**
-   - تسجيل وتسجيل دخول المستخدمين
-   - إدارة الملفات الشخصية
-   - إدارة الصلاحيات والأدوار
+1. **نظام المستخدمين | User System**
 
-2. **نظام التقييم**
-   - نماذج تقييم ADHD
-   - حساب وتحليل النتائج
-   - عرض التقارير والتوصيات
+   - تسجيل وتسجيل دخول المستخدمين | User registration and login
+   - إدارة الملفات الشخصية | Profile management
+   - إدارة الصلاحيات والأدوار | Permissions and roles management
 
-3. **نظام الذكاء الاصطناعي**
-   - تحليل نتائج التقييم
-   - توليد التوصيات
-   - المساعد الذكي للدعم
+2. **نظام التقييم | Assessment System**
 
-4. **نظام التقارير**
-   - إنشاء تقارير تفصيلية
-   - تصدير وطباعة التقارير
-   - مشاركة النتائج
+   - نماذج تقييم ADHD | ADHD assessment forms
+   - حساب وتحليل النتائج | Results calculation and analysis
+   - عرض التقارير والتوصيات | Reports and recommendations display
 
-### المتطلبات غير الوظيفية
+3. **نظام الذكاء الاصطناعي | AI System**
 
-1. **الأداء**
-   - زمن استجابة أقل من 2 ثانية
-   - دعم 1000 مستخدم متزامن
-   - توفر النظام 99.9%
+   - تحليل نتائج التقييم | Assessment results analysis
+   - توليد التوصيات | Recommendations generation
+   - المساعد الذكي للدعم | Smart support assistant
 
-2. **الأمان**
-   - تشفير البيانات
-   - المصادقة الثنائية
-   - سجلات المراجعة
+4. **نظام التقارير | Reporting System**
 
-3. **قابلية الاستخدام**
-   - واجهة سهلة الاستخدام
-   - دعم اللغة العربية
-   - توافق مع جميع الأجهزة
+   - إنشاء تقارير تفصيلية | Detailed report creation
+   - تصدير وطباعة التقارير | Report export and printing
+   - مشاركة النتائج | Results sharing
 
-### الموارد المطلوبة
+### المتطلبات غير الوظيفية | Non-Functional Requirements
 
-1. **الموارد البشرية**
-   - فريق تطوير (3 أعضاء)
-   - فريق تصميم (2 أعضاء)
-   - فريق توثيق (2 أعضاء)
-   - مدير مالي
+1. **الأداء | Performance**
 
-2. **الموارد التقنية**
-   - خوادم Firebase
-   - حساب Google Cloud
-   - أدوات التطوير
-   - تراخيص البرمجيات
+   - زمن استجابة أقل من 2 ثانية | Response time less than 2 seconds
+   - دعم 1000 مستخدم متزامن | Support 1000 concurrent users
+   - توفر النظام 99.9% | 99.9% system availability
 
-## 2. مرحلة التصميم
+2. **الأمان | Security**
 
-### التصميم المعماري
+   - تشفير البيانات | Data encryption
+   - المصادقة الثنائية | Two-factor authentication
+   - سجلات المراجعة | Audit logs
 
-1. **طبقة العرض**
-   - Flutter UI Components
-   - Material Design 3.0
-   - Responsive Layouts
+3. **قابلية الاستخدام | Usability**
 
-2. **طبقة المنطق**
-   - BLoC Pattern
-   - Provider State Management
-   - Business Logic Services
+   - واجهة سهلة الاستخدام | User-friendly interface
+   - دعم اللغة العربية | Arabic language support
+   - توافق مع جميع الأجهزة | Compatibility with all devices
 
-3. **طبقة البيانات**
-   - Firebase Services
-   - Local SQLite Database
-   - Secure Storage
+### الموارد المطلوبة | Required Resources
 
-### تصميم قاعدة البيانات
+1. **الموارد البشرية | Human Resources**
 
-1. **جداول المستخدمين**
-   - Users
-   - Children
-   - Specialists
+   - فريق تطوير (3 أعضاء) | Development team (3 members)
+   - فريق تصميم (2 أعضاء) | Design team (2 members)
+   - فريق توثيق (2 أعضاء) | Documentation team (2 members)
+   - مدير مالي | Financial manager
 
-2. **جداول التقييم**
-   - Assessments
-   - Results
-   - Recommendations
+2. **الموارد التقنية | Technical Resources**
 
-3. **جداول النظام**
-   - Settings
-   - Logs
-   - Analytics
+   - خوادم Firebase | Firebase servers
+   - حساب Google Cloud | Google Cloud account
+   - أدوات التطوير | Development tools
+   - تراخيص البرمجيات | Software licenses
 
-### تصميم واجهة المستخدم
+## 2. مرحلة التصميم | Design Phase
 
-1. **الشاشات الرئيسية**
-   - تسجيل الدخول
-   - لوحة التحكم
-   - صفحة التقييم
-   - عرض النتائج
+### التصميم المعماري | Architectural Design
 
-2. **عناصر التصميم**
-   - نظام الألوان
-   - الخطوط
-   - الأيقونات
-   - العناصر التفاعلية
+1. **طبقة العرض | Presentation Layer**
 
-### معايير التصميم
+   - Flutter UI Components | Flutter UI components
+   - Material Design 3.0 | Material Design 3.0
+   - Responsive Layouts | Responsive layouts
 
-1. **معايير الكود**
-   - Flutter/Dart Style Guide
-   - التعليقات والتوثيق
-   - تنظيم الملفات
+2. **طبقة المنطق | Business Logic Layer**
 
-2. **معايير UI/UX**
-   - Material Design Guidelines
-   - Accessibility Standards
-   - Responsive Design Rules
+   - BLoC Pattern | BLoC pattern
+   - Provider State Management | Provider state management
+   - Business Logic Services | Business logic services
 
-## المخرجات المتوقعة
+3. **طبقة البيانات | Data Layer**
 
-### مرحلة التحليل
+   - Firebase Services | Firebase services
+   - Local SQLite Database | Local SQLite database
+   - Secure Storage | Secure storage
 
-1. وثيقة المتطلبات (SRS)
-2. خطة إدارة المخاطر
-3. خطة إدارة الموارد
-4. جدول زمني للمشروع
+### تصميم قاعدة البيانات | Database Design
 
-### مرحلة التصميم
+1. **جداول المستخدمين | Users Tables**
 
-1. وثائق التصميم المعماري
-2. مخططات قاعدة البيانات
-3. تصميمات UI/UX
-4. نماذج أولية تفاعلية
+   - Users | Users
+   - Children | Children
+   - Specialists | Specialists
 
-## المعايير والمقاييس
+2. **جداول التقييم | Assessment Tables**
 
-### معايير النجاح
+   - Assessments | Assessments
+   - Results | Results
+   - Recommendations | Recommendations
 
-1. اكتمال جميع المتطلبات الأساسية
-2. تحقيق معايير الأداء
-3. رضا المستخدمين
-4. جودة الكود والتوثيق
+3. **جداول النظام | System Tables**
 
-### مقاييس الأداء
+   - Settings | Settings
+   - Logs | Logs
+   - Analytics | Analytics
 
-1. زمن الاستجابة
-2. معدل الأخطاء
-3. رضا المستخدمين
-4. تغطية الاختبارات
+### تصميم واجهة المستخدم | User Interface Design
+
+1. **الشاشات الرئيسية | Main Screens**
+
+   - تسجيل الدخول | Login
+   - لوحة التحكم | Dashboard
+   - صفحة التقييم | Assessment page
+   - عرض النتائج | Results display
+
+2. **عناصر التصميم | Design Elements**
+
+   - نظام الألوان | Color scheme
+   - الخطوط | Fonts
+   - الأيقونات | Icons
+   - العناصر التفاعلية | Interactive elements
+
+### معايير التصميم | Design Standards
+
+1. **معايير الكود | Code Standards**
+
+   - Flutter/Dart Style Guide | Flutter/Dart style guide
+   - التعليقات والتوثيق | Comments and documentation
+   - تنظيم الملفات | File organization
+
+2. **معايير UI/UX | UI/UX Standards**
+
+   - Material Design Guidelines | Material Design guidelines
+   - Accessibility Standards | Accessibility standards
+   - Responsive Design Rules | Responsive design rules
+
+## المخرجات المتوقعة | Expected Outputs
+
+### مرحلة التحليل | Analysis Phase
+
+1. وثيقة المتطلبات (SRS) | Software Requirements Specification (SRS)
+2. خطة إدارة المخاطر | Risk management plan
+3. خطة إدارة الموارد | Resource management plan
+4. جدول زمني للمشروع | Project timeline
+
+### مرحلة التصميم | Design Phase
+
+1. وثائق التصميم المعماري | Architectural design documents
+2. مخططات قاعدة البيانات | Database schema
+3. تصميمات UI/UX | UI/UX designs
+4. نماذج أولية تفاعلية | Interactive prototypes
+
+## المعايير والمقاييس | Standards and Metrics
+
+### معايير النجاح | Success Criteria
+
+1. اكتمال جميع المتطلبات الأساسية | Completion of all primary requirements
+2. تحقيق معايير الأداء | Achievement of performance standards
+3. رضا المستخدمين | User satisfaction
+4. جودة الكود والتوثيق | Code and documentation quality
+
+### مقاييس الأداء | Performance Metrics
+
+1. زمن الاستجابة | Response time
+2. معدل الأخطاء | Error rate
+3. رضا المستخدمين | User satisfaction
+4. تغطية الاختبارات | Test coverage

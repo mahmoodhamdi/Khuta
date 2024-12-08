@@ -1,128 +1,128 @@
-# الجدول الزمني لمشروع "خُطى"
+# الجدول الزمني لمشروع "خُطى" | Project Timeline for "Khuta"
 
-## المرحلة الأولى: التخطيط والتحليل (8/12/2023 - 22/12/2023)
+## المرحلة الأولى: التخطيط والتحليل | Phase One: Planning and Analysis (8/12/2023 - 22/12/2023)
 
-### الأسبوع الأول (8/12 - 15/12)
+### الأسبوع الأول | Week One (8/12 - 15/12)
 
-#### المهام
+#### المهام | Tasks
 
-- [ ] جمع المتطلبات التفصيلية للنظام
-- [ ] تحليل احتياجات المستخدمين
-- [ ] دراسة المنافسين والحلول الموجودة
-- [ ] تحديد نطاق المشروع MVP
-- [ ] تحديد الموارد المطلوبة والميزانية
+- [ ] جمع المتطلبات التفصيلية للنظام | Gather detailed system requirements
+- [ ] تحليل احتياجات المستخدمين | Analyze user needs
+- [ ] دراسة المنافسين والحلول الموجودة | Study competitors and existing solutions
+- [ ] تحديد نطاق المشروع MVP | Define MVP scope
+- [ ] تحديد الموارد المطلوبة والميزانية | Identify required resources and budget
 
-#### المسؤوليات
+#### المسؤوليات | Responsibilities
 
-- **محمود حمدي**: قيادة عملية التحليل وتوثيق المتطلبات التقنية
-- **محمد الشايب**: مساعدة في جمع المتطلبات الوظيفية
-- **غمري وأحمد السيد**: توثيق المتطلبات وإعداد SRS
-- **علي**: تحليل التكاليف والميزانية
+- **محمود حمدي | Mahmoud Hamdy**: قيادة عملية التحليل وتوثيق المتطلبات التقنية | Lead analysis and document technical requirements
+- **محمد الشايب | Mohamed ElShayeb**: مساعدة في جمع المتطلبات الوظيفية | Assist in gathering functional requirements
+- **غمري وأحمد السيد | Ghomry & Ahmed ElSayed**: توثيق المتطلبات وإعداد SRS | Document requirements and prepare SRS
+- **علي | Ali**: تحليل التكاليف والميزانية | Cost and budget analysis
 
-### الأسبوع الثاني (15/12 - 22/12)
+### الأسبوع الثاني | Week Two (15/12 - 22/12)
 
-#### المهام
+#### المهام | Tasks
 
-- [ ] تحديد المخاطر المحتملة
-- [ ] وضع خطة إدارة المخاطر
-- [ ] تحديد معايير قبول النظام
-- [ ] إعداد وثيقة المتطلبات النهائية (SRS)
-- [ ] مراجعة وتوقيع وثيقة المتطلبات
+- [ ] تحديد المخاطر المحتملة | Identify potential risks
+- [ ] وضع خطة إدارة المخاطر | Create risk management plan
+- [ ] تحديد معايير قبول النظام | Define system acceptance criteria
+- [ ] إعداد وثيقة المتطلبات النهائية (SRS) | Prepare final SRS document
+- [ ] مراجعة وتوقيع وثيقة المتطلبات | Review and sign requirements document
 
-#### المسؤوليات
+#### المسؤوليات | Responsibilities
 
-- **محمود حمدي**: مراجعة وتأكيد المتطلبات التقنية
-- **محمد الشايب**: مساعدة في تحديد معايير القبول
-- **غمري وأحمد السيد**: إنهاء وثيقة SRS
-- **علي**: وضع خطة إدارة المخاطر المالية
+- **محمود حمدي | Mahmoud Hamdy**: مراجعة وتأكيد المتطلبات التقنية | Review and confirm technical requirements
+- **محمد الشايب | Mohamed ElShayeb**: مساعدة في تحديد معايير القبول | Help define acceptance criteria
+- **غمري وأحمد السيد | Ghomry & Ahmed ElSayed**: إنهاء وثيقة SRS | Finalize SRS document
+- **علي | Ali**: وضع خطة إدارة المخاطر المالية | Create financial risk management plan
 
-## المرحلة الثانية: التصميم (22/12/2023 - 1/2/2024)
+## المرحلة الثانية: التصميم | Phase Two: Design (22/12/2023 - 1/2/2024)
 
-### الأسبوع الأول (22/12 - 29/12)
+### الأسبوع الأول | Week One (22/12 - 29/12)
 
-#### المهام
+#### المهام | Tasks
 
-- [ ] تصميم الهيكل المعماري للنظام
-- [ ] تصميم قاعدة البيانات
-- [ ] تحديد التقنيات والأدوات
-- [ ] بدء تصميم UI/UX الأولي
+- [ ] تصميم الهيكل المعماري للنظام | Design system architecture
+- [ ] تصميم قاعدة البيانات | Design database
+- [ ] تحديد التقنيات والأدوات | Define technologies and tools
+- [ ] بدء تصميم UI/UX الأولي | Start initial UI/UX design
 
-#### المسؤوليات
+#### المسؤوليات | Responsibilities
 
-- **محمود حمدي**: تصميم الهيكل المعماري وقاعدة البيانات
-- **محمد الصباحي**: قيادة تصميم UI/UX
-- **عبد المقصود**: مساعدة في تصميم UI/UX
-- **محمد الشايب**: مراجعة التصميمات التقنية
+- **محمود حمدي | Mahmoud Hamdy**: تصميم الهيكل المعماري وقاعدة البيانات | Design architecture and database
+- **محمد الصباحي | Mohamed ElSabahy**: قيادة تصميم UI/UX | Lead UI/UX design
+- **عبد المقصود | Abdelmaksoud**: مساعدة في تصميم UI/UX | Assist in UI/UX design
+- **محمد الشايب | Mohamed ElShayeb**: مراجعة التصميمات التقنية | Review technical designs
 
-### الأسبوع الثاني (29/12 - 5/1)
+### الأسبوع الثاني | Week Two (29/12 - 5/1)
 
-#### المهام
+#### المهام | Tasks
 
-- [ ] تصميم واجهات المستخدم التفصيلية
-- [ ] إنشاء User Flow Diagrams
-- [ ] تصميم نماذج التقييم
-- [ ] تصميم نظام التقارير
+- [ ] تصميم واجهات المستخدم التفصيلية | Design detailed user interfaces
+- [ ] إنشاء User Flow Diagrams | Create user flow diagrams
+- [ ] تصميم نماذج التقييم | Design assessment forms
+- [ ] تصميم نظام التقارير | Design reporting system
 
-#### المسؤوليات
+#### المسؤوليات | Responsibilities
 
-- **محمد الصباحي**: تصميم الواجهات الرئيسية
-- **عبد المقصود**: تصميم العناصر البصرية
-- **محمود حمدي**: مراجعة التصميمات من الناحية التقنية
-- **غمري وأحمد السيد**: توثيق التصميمات
+- **محمد الصباحي | Mohamed ElSabahy**: تصميم الواجهات الرئيسية | Design main interfaces
+- **عبد المقصود | Abdelmaksoud**: تصميم العناصر البصرية | Design visual elements
+- **محمود حمدي | Mahmoud Hamdy**: مراجعة التصميمات من الناحية التقنية | Technical design review
+- **غمري وأحمد السيد | Ghomry & Ahmed ElSayed**: توثيق التصميمات | Document designs
 
-### الأسبوع الثالث (5/1 - 12/1)
+### الأسبوع الثالث | Week Three (5/1 - 12/1)
 
-#### المهام
+#### المهام | Tasks
 
-- [ ] إنشاء النماذج الأولية (Prototypes)
-- [ ] تصميم نظام المصادقة
-- [ ] تصميم آلية دمج الذكاء الاصطناعي
-- [ ] مراجعة وتحسين التصميمات
+- [ ] إنشاء النماذج الأولية (Prototypes) | Create prototypes
+- [ ] تصميم نظام المصادقة | Design authentication system
+- [ ] تصميم آلية دمج الذكاء الاصطناعي | Design AI integration mechanism
+- [ ] مراجعة وتحسين التصميمات | Review and improve designs
 
-#### المسؤوليات
+#### المسؤوليات | Responsibilities
 
-- **محمد الصباحي**: إنشاء Prototypes
-- **عبد المقصود**: تحسين UX
-- **محمود حمدي**: تصميم نظام المصادقة والذكاء الاصطناعي
-- **محمد الشايب**: اختبار النماذج الأولية
+- **محمد الصباحي | Mohamed ElSabahy**: إنشاء Prototypes | Create prototypes
+- **عبد المقصود | Abdelmaksoud**: تحسين UX | Improve UX
+- **محمود حمدي | Mahmoud Hamdy**: تصميم نظام المصادقة والذكاء الاصطناعي | Design authentication and AI systems
+- **محمد الشايب | Mohamed ElShayeb**: اختبار النماذج الأولية | Test prototypes
 
-### الأسبوع الرابع (12/1 - 19/1)
+### الأسبوع الرابع | Week Four (12/1 - 19/1)
 
-#### المهام
+#### المهام | Tasks
 
-- [ ] مراجعة شاملة للتصميمات
-- [ ] إجراء تعديلات نهائية
-- [ ] توثيق التصميم النهائي
-- [ ] الموافقة على التصميمات
+- [ ] مراجعة شاملة للتصميمات | Comprehensive design review
+- [ ] إجراء تعديلات نهائية | Make final adjustments
+- [ ] توثيق التصميم النهائي | Document final design
+- [ ] الموافقة على التصميمات | Approve designs
 
-#### المسؤوليات
+#### المسؤوليات | Responsibilities
 
-- **جميع الفريق**: مراجعة التصميمات
-- **غمري وأحمد السيد**: إعداد وثائق التصميم النهائية
-- **محمود حمدي**: الموافقة النهائية على التصميم التقني
-- **محمد الصباحي**: الموافقة النهائية على تصميم UI/UX
+- **جميع الفريق | All Team**: مراجعة التصميمات | Review designs
+- **غمري وأحمد السيد | Ghomry & Ahmed ElSayed**: إعداد وثائق التصميم النهائية | Prepare final design documents
+- **محمود حمدي | Mahmoud Hamdy**: الموافقة النهائية على التصميم التقني | Final technical design approval
+- **محمد الصباحي | Mohamed ElSabahy**: الموافقة النهائية على تصميم UI/UX | Final UI/UX design approval
 
-### الأسبوع الخامس (19/1 - 1/2)
+### الأسبوع الخامس | Week Five (19/1 - 1/2)
 
-#### المهام
+#### المهام | Tasks
 
-- [ ] إعداد بيئة التطوير
-- [ ] تجهيز الأدوات والمكتبات
-- [ ] إعداد CI/CD pipeline
-- [ ] البدء في التطوير الأولي
+- [ ] إعداد بيئة التطوير | Prepare development environment
+- [ ] تجهيز الأدوات والمكتبات | Prepare tools and libraries
+- [ ] إعداد CI/CD pipeline | Prepare CI/CD pipeline
+- [ ] البدء في التطوير الأولي | Start initial development
 
-#### المسؤوليات
+#### المسؤوليات | Responsibilities
 
-- **محمود حمدي**: إعداد بيئة التطوير وCI/CD
-- **محمد الشايب**: مساعدة في إعداد البيئة
-- **غمري وأحمد السيد**: توثيق الإعداد التقني
-- **علي**: تأمين الموارد والتراخيص المطلوبة
+- **محمود حمدي | Mahmoud Hamdy**: إعداد بيئة التطوير وCI/CD | Prepare development environment and CI/CD
+- **محمد الشايب | Mohamed ElShayeb**: مساعدة في إعداد البيئة | Assist in preparing environment
+- **غمري وأحمد السيد | Ghomry & Ahmed ElSayed**: توثيق الإعداد التقني | Document technical preparation
+- **علي | Ali**: تأمين الموارد والتراخيص المطلوبة | Secure required resources and licenses
 
-## المخرجات المتوقعة بحلول 1/2
+## المخرجات المتوقعة بحلول 1/2 | Expected Outputs by 1/2
 
-1. وثيقة متطلبات النظام (SRS) كاملة ومعتمدة
-2. التصميم المعماري الكامل للنظام
-3. تصميمات UI/UX النهائية
-4. النماذج الأولية القابلة للتفاعل
-5. وثائق التصميم التفصيلية
-6. بيئة تطوير جاهزة للبدء في المرحلة التالية
+1. وثيقة متطلبات النظام (SRS) كاملة ومعتمدة | Complete and approved SRS document
+2. التصميم المعماري الكامل للنظام | Complete system architecture design
+3. تصميمات UI/UX النهائية | Final UI/UX designs
+4. النماذج الأولية القابلة للتفاعل | Interactive prototypes
+5. وثائق التصميم التفصيلية | Detailed design documents
+6. بيئة تطوير جاهزة للبدء في المرحلة التالية | Development environment ready for next phase

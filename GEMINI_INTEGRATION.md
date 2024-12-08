@@ -113,7 +113,7 @@ final analysis = await geminiService.analyzeResults(assessmentResult);
 final recommendations = await geminiService.generateRecommendations(assessmentResult);
 ```
 
-### 3. تحليل التقدم
+## 3. تحليل التقدم
 
 ```dart
 final progressAnalysis = await geminiService.getProgressAnalysis(assessmentHistory);
