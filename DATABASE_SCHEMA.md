@@ -43,16 +43,15 @@ CREATE TABLE children (
 
 ```sql
 CREATE TABLE assessments (
-    id TEXT PRIMARY KEY,
-    child_id TEXT NOT NULL,
-    specialist_id TEXT NOT NULL,
-    assessment_type TEXT NOT NULL CHECK (assessment_type IN ('conners', 'custom')),
-    status TEXT CHECK (status IN ('in_progress', 'completed')),
-    started_at TIMESTAMP NOT NULL,
-    completed_at TIMESTAMP,
-    duration INTEGER,
-    FOREIGN KEY (child_id) REFERENCES children(id) ON DELETE CASCADE,
-    FOREIGN KEY (specialist_id) REFERENCES users(id) ON DELETE CASCADE
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    child_id INTEGER NOT NULL,
+    assessment_type TEXT NOT NULL,
+    score INTEGER NOT NULL,
+    date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    notes TEXT,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (child_id) REFERENCES children(id)
 );
 ```
 
@@ -94,7 +93,6 @@ CREATE TABLE results (
     assessment_id TEXT NOT NULL,
     total_score FLOAT NOT NULL,
     severity_level TEXT CHECK (severity_level IN ('mild', 'moderate', 'severe')),
-    ai_analysis JSON,
     recommendations TEXT,
     generated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (assessment_id) REFERENCES assessments(id) ON DELETE CASCADE
@@ -125,7 +123,6 @@ CREATE TABLE settings (
     notifications JSON,
     theme TEXT,
     system_settings JSON,
-    ai_parameters JSON,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );

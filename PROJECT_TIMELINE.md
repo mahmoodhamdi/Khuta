@@ -76,14 +76,13 @@
 
 - [ ] إنشاء النماذج الأولية (Prototypes) | Create prototypes
 - [ ] تصميم نظام المصادقة | Design authentication system
-- [ ] تصميم آلية دمج الذكاء الاصطناعي | Design AI integration mechanism
 - [ ] مراجعة وتحسين التصميمات | Review and improve designs
 
 #### المسؤوليات | Responsibilities
 
 - **محمد الصباحي | Mohamed ElSabahy**: إنشاء Prototypes | Create prototypes
 - **عبد المقصود | Abdelmaksoud**: تحسين UX | Improve UX
-- **محمود حمدي | Mahmoud Hamdy**: تصميم نظام المصادقة والذكاء الاصطناعي | Design authentication and AI systems
+- **محمود حمدي | Mahmoud Hamdy**: تصميم نظام المصادقة | Design authentication system
 - **محمد الشايب | Mohamed ElShayeb**: اختبار النماذج الأولية | Test prototypes
 
 ### الأسبوع الرابع | Week Four (12/1 - 19/1)

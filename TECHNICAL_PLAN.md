@@ -17,10 +17,11 @@
    - Cloud Storage
    - Cloud Functions
 
-3. **الذكاء الاصطناعي**
-
-   - Google Gemini API
-   - TensorFlow Lite (اختياري)
+3. **خدمات الخلفية | Backend Services**
+   - Node.js/Express
+   - PostgreSQL
+   - Redis
+   - JWT Authentication
 
 ## هيكل التطبيق
 
@@ -51,7 +52,6 @@
 2. **المكونات المنطقية**
 
    - Assessment Engine
-   - AI Analysis Engine
    - Report Generator
    - Data Synchronization
 

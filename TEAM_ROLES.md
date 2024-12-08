@@ -4,18 +4,11 @@
 
 ### محمود حمدي - قائد الفريق والمطور الرئيسي | Mahmoud Hamdy - Team Lead & Main Developer
 
-#### المهام التقنية | Technical Tasks (Weeks 1-16)
-
-- تطوير الهيكل الأساسي للتطبيق | Developing app core structure
-- إعداد قاعدة البيانات وهيكلة البيانات | Database setup and data structure
-- تكامل خدمات Firebase | Firebase services integration
-- تنفيذ نظام المصادقة والأمان | Authentication & security implementation
-- دمج Google Gemini AI | AI integration
-- تطوير خوارزميات التقييم | Assessment algorithms development
+#### المسؤوليات | Responsibilities
+- إدارة المشروع | Project management
+- تطوير الخدمات الخلفية | Backend development
 - تطوير واجهات المستخدم الرئيسية | Main UI development
-- تنفيذ نظام الإشعارات | Notifications system implementation
-- اختبار وظائف التطبيق | Application testing
-- تحسين الأداء | Performance optimization
+- نظام المصادقة | Authentication system
 
 #### مهام القيادة | Leadership Tasks (Ongoing)
 

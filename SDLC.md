@@ -12,15 +12,17 @@
 
 2. **نظام التقييم | Assessment System**
 
-   - نماذج تقييم ADHD | ADHD assessment forms
-   - حساب وتحليل النتائج | Results calculation and analysis
-   - عرض التقارير والتوصيات | Reports and recommendations display
+   - إدارة المقاييس | Scale management
+   - تسجيل النتائج | Results recording
+   - تحليل البيانات | Data analysis
+   - إنشاء التقارير | Report creation
 
-3. **نظام الذكاء الاصطناعي | AI System**
+3. **نظام المتابعة | Follow-up System**
 
-   - تحليل نتائج التقييم | Assessment results analysis
-   - توليد التوصيات | Recommendations generation
-   - المساعد الذكي للدعم | Smart support assistant
+   - إدارة المواعيد | Appointment management
+   - إرسال التذكيرات | Reminder sending
+   - تحليل النتائج | Results analysis
+   - عرض التقارير | Report display
 
 4. **نظام التقارير | Reporting System**
 
