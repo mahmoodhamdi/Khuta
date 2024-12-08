@@ -9,6 +9,7 @@
    - تسجيل وتسجيل دخول المستخدمين | User registration and login
    - إدارة الملفات الشخصية | Profile management
    - إدارة الصلاحيات والأدوار | Permissions and roles management
+   - اختيار دور المستخدم كمتخصص أو ولي أمر | User role selection as Specialist or Guardian
 
 2. **نظام التقييم | Assessment System**
 
@@ -16,6 +17,9 @@
    - تسجيل النتائج | Results recording
    - تحليل البيانات | Data analysis
    - إنشاء التقارير | Report creation
+   - نظام اختبار للأولياء لتقييم الاحتياجات | Testing system for guardians to assess needs
+   - اقتراح أنشطة علاجية بناءً على النتائج | Suggest therapeutic activities based on results
+   - عرض قائمة الأطباء المقترحين بناءً على نتائج التقييم | Display a list of suggested doctors based on assessment results
 
 3. **نظام المتابعة | Follow-up System**
 
@@ -29,6 +33,21 @@
    - إنشاء تقارير تفصيلية | Detailed report creation
    - تصدير وطباعة التقارير | Report export and printing
    - مشاركة النتائج | Results sharing
+
+5. **نظام إدارة المستندات | Document Management System**
+
+   - إدارة المستندات للمتخصصين | Specialist document management
+
+6. **نظام الاختبارات | Testing System**
+
+   - نظام اختبار للأولياء لتقييم الاحتياجات | Testing system for guardians to assess needs
+   - نظام اختبار للأطفال لتقييم التطور | Testing system for children to assess development
+
+7. **نظام التوصيات | Recommendation System**
+
+   - عرض قائمة الأطباء المقترحين | Display suggested doctors list
+   - تقديم الأنشطة العلاجية | Provide therapeutic activities
+   - إدارة التوصيات | Manage recommendations
 
 ### المتطلبات غير الوظيفية | Non-Functional Requirements
 
@@ -65,6 +84,7 @@
    - حساب Google Cloud | Google Cloud account
    - أدوات التطوير | Development tools
    - تراخيص البرمجيات | Software licenses
+   - Flutter SDK | Flutter SDK
 
 ## 2. مرحلة التصميم | Design Phase
 

@@ -5,10 +5,15 @@
 ### محمود حمدي - قائد الفريق والمطور الرئيسي | Mahmoud Hamdy - Team Lead & Main Developer
 
 #### المسؤوليات | Responsibilities
+
 - إدارة المشروع | Project management
-- تطوير الخدمات الخلفية | Backend development
-- تطوير واجهات المستخدم الرئيسية | Main UI development
+- تطوير الخدمات الخلفية باستخدام Flutter | Backend development with Flutter
+- تطوير واجهات المستخدم الرئيسية باستخدام Flutter | Main UI development with Flutter
 - نظام المصادقة | Authentication system
+- إدارة نظام الأدوار | Role management system
+- تطوير نظام الكشف المبكر | Early detection system development
+- تطوير خوارزميات التوصية الذكية | Smart recommendation algorithms development
+- تكامل مقياس كونرز | Conners Scale integration
 
 #### مهام القيادة | Leadership Tasks (Ongoing)
 
@@ -23,7 +28,7 @@
 
 #### المهام المساعدة | Assistant Tasks (Weeks 1-12)
 
-- مساعدة في تطوير الواجهات البسيطة | Help with simple UI development
+- مساعدة في تطوير الواجهات البسيطة باستخدام Flutter | Help with simple UI development using Flutter
 - تنفيذ التعديلات البسيطة | Implement minor modifications
 - المساعدة في الاختبار | Assist in testing
 - توثيق الكود | Code documentation
@@ -38,19 +43,21 @@
 - تصميم نظام الألوان والخطوط | Color scheme & typography
 - إنشاء Style Guide | Style guide creation
 - تصميم الشعار والأيقونات | Logo & icons design
-- تصميم الشاشات الرئيسية | Main screens design
+- تصميم الشاشات الرئيسية باستخدام Flutter | Main screens design using Flutter
 - تصميم نماذج التقييم | Assessment forms design
 - تصميم عرض النتائج | Results visualization design
 - تصميم الرسوم التوضيحية | Illustrations design
+- تصميم واجهات الكشف المبكر عن اضطراب نقص الانتباه | Design of early detection interfaces for ADHD
 
 ### عبد المقصود - مصمم UI/UX مساعد | Abdelmaksoud - Assistant UI/UX Designer
 
 #### مهام المساعدة في التصميم | Design Assistance (Weeks 1-12)
 
-- مساعدة في تصميم العناصر البصرية | Help with visual elements
-- تنفيذ تعديلات التصميم | Implement design modifications
-- إعداد الموارد البصرية | Prepare visual assets
-- المساعدة في اختبارات المستخدم | Assist in user testing
+- مساعدة في تصميم العناصر البصرية | Help with visual elements design
+- المساعدة في إعداد النماذج الأولية | Assist in prototype preparation
+- الالتزام بالمواعيد | Deadlines commitment
+- التعاون مع الفريق | Team collaboration
+- المبادرة والإبداع | Initiative & creativity
 
 ## الأدوار المساندة | Support Roles
 
@@ -113,7 +120,6 @@
 
 ### تقييم أداء الفريق | Team Performance
 
-- إنجاز المراحل | Phase completion
-- جودة المنتج | Product quality
-- رضا المستخدمين | User satisfaction
-- سرعة حل المشكلات | Problem-solving speed
+- تقييم الأداء الفردي والجماعي | Individual and team performance evaluation
+- تحسين الكفاءة والإنتاجية | Efficiency and productivity improvement
+- تعزيز التواصل والتعاون | Enhance communication and collaboration
