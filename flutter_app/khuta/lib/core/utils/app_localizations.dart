@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart';
 
-
 class AppLocalizations {
   static const LocalizationsDelegate<AppLocalizations> delegate =
       _AppLocalizationsDelegate();
@@ -20,13 +19,12 @@ class AppLocalizations {
   ];
 
   static Future<AppLocalizations> load(Locale locale) async {
-    final String name = locale.languageCode;
-    final String localeName = Intl.canonicalizedLocale(name);
     return AppLocalizations();
   }
 
   static AppLocalizations of(BuildContext context) {
-    final AppLocalizations? localizations = Localizations.of<AppLocalizations>(context, AppLocalizations);
+    final AppLocalizations? localizations =
+        Localizations.of<AppLocalizations>(context, AppLocalizations);
     assert(localizations != null, 'AppLocalizations not found in context');
     return localizations!;
   }
@@ -53,12 +51,10 @@ class _AppLocalizationsDelegate
   const _AppLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) =>
-      ['en', 'ar'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => ['en', 'ar'].contains(locale.languageCode);
 
   @override
-  Future<AppLocalizations> load(Locale locale) =>
-      AppLocalizations.load(locale);
+  Future<AppLocalizations> load(Locale locale) => AppLocalizations.load(locale);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
