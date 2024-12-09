@@ -1,0 +1,14 @@
+{
+  "app_name": "My Application",
+  "welcome": "Welcome",
+  "home": "Home",
+  "settings": "Settings",
+  "profile": "Profile",
+  "logout": "Logout",
+  "login": "Login",
+  "register": "Register",
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+  "save": "Save",
+  "delete": "Delete"
+}
