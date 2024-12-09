@@ -26,51 +26,6 @@
 
 ---
 
-## **هيكل المشروع | Project Structure**
-
-```
-ADHD/
-├── flutter_app/        # تطبيق فلاتر | Flutter Application
-│   ├── lib/           # كود المصدر | Source Code
-│   ├── test/         # اختبارات | Tests
-│   └── assets/       # الموارد | Assets
-│
-├── backend/           # خدمات الخلفية | Backend Services
-│   ├── src/          # كود المصدر | Source Code
-│   ├── tests/        # اختبارات | Tests
-│   └── config/       # إعدادات | Configuration
-│
-└── docs/             # التوثيق | Documentation
-    ├── analysis/     # تحليل | Analysis
-    │   ├── competitor_analysis.md
-    │   └── market_analysis.md
-    │
-    ├── planning/     # تخطيط | Planning
-    │   ├── project_scope.md
-    │   ├── timeline.md
-    │   └── resources.md
-    │
-    ├── requirements/ # متطلبات | Requirements
-    │   ├── requirements_analysis.md
-    │   ├── srs_document.md
-    │   └── acceptance_criteria.md
-    │
-    ├── design/       # تصميم | Design
-    │   ├── ui/
-    │   ├── database/
-    │   └── architecture/
-    │
-    ├── technical/    # تقني | Technical
-    │   ├── api/
-    │   ├── setup/
-    │   └── deployment/
-    │
-    └── reports/      # تقارير | Reports
-        ├── weekly/
-        ├── monthly/
-        └── reviews/
-```
-
 ## **المتطلبات | Requirements**
 
 ### **تطبيق فلاتر | Flutter App**
