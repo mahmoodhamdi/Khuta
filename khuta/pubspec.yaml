@@ -1,0 +1,67 @@
+name: khuta
+description: "khuta"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: 
+  # State Management
+  flutter_bloc: 
+  bloc: 
+  # Dependency Injection
+  get_it:
+  # Functional Programming
+  dartz: 
+  # API
+  dio: 
+  # Local Storage
+  shared_preferences: 
+  # Others
+  equatable: 
+  flutter_screenutil: 
+  flutter_svg: 
+  fluttertoast:
+  cached_network_image: 
+  shimmer: 
+  url_launcher:
+  flutter_localizations:
+    sdk: flutter
+  easy_localization: ^3.0.0
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 
+  bloc_test:
+  mockito: 
+  build_runner: 
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo-VariableFont_slnt,wght.ttf
+        - asset: assets/fonts/static/Cairo-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/static/Cairo-Light.ttf
+          weight: 300
+        - asset: assets/fonts/static/Cairo-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/static/Cairo-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/static/Cairo-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/static/Cairo-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/static/Cairo-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/static/Cairo-Black.ttf
+          weight: 900
