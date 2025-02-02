@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:khuta/main.dart';
+import '../../main.dart';
 import '../../core/utils/app_strings.dart';
 
 class Routes {

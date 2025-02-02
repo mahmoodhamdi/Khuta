@@ -1,11 +1,10 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:khuta/config/routes/app_routes.dart';
-import 'package:khuta/core/theme/app_theme.dart';
-import 'package:khuta/core/utils/app_bloc_observer.dart';
 
+import 'config/routes/app_routes.dart';
+import 'core/theme/app_theme.dart';
+import 'core/utils/app_bloc_observer.dart';
 import 'injection_container.dart' as di;
 
 void main() async {
@@ -27,7 +26,6 @@ class MyApp extends StatelessWidget {
       builder: (_, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-           
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: ThemeMode.system,
