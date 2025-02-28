@@ -12,7 +12,20 @@
           "package_name": "com.example.khuta"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "201439105882-mbmkh09hf3e4qkhvhnmapharnbarf2uk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.khuta",
+            "certificate_hash": "69645fca734d4d75da2595aa3ff4eacba55be8e4"
+          }
+        },
+        {
+          "client_id": "201439105882-gl7vp00d0aeuofjgc23ud761qg1ipabb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyC00bYeLNp_x0llporiRWnuGvT5nIJcEGg"
@@ -20,7 +33,63 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "201439105882-gl7vp00d0aeuofjgc23ud761qg1ipabb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "201439105882-gb5el0gkcq6o6u0rrfhbm0u2qdi2uq42.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.khuta"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201439105882:android:2bc9fd5e2649834d6d5963",
+        "android_client_info": {
+          "package_name": "com.example.khuta.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "201439105882-7d7knhgb0jmrs599rsn3fvg6ub49t7d1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.khuta.dev",
+            "certificate_hash": "5d08a8558d6d646aeece7bac927c775863b20a4b"
+          }
+        },
+        {
+          "client_id": "201439105882-gl7vp00d0aeuofjgc23ud761qg1ipabb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC00bYeLNp_x0llporiRWnuGvT5nIJcEGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "201439105882-gl7vp00d0aeuofjgc23ud761qg1ipabb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "201439105882-gb5el0gkcq6o6u0rrfhbm0u2qdi2uq42.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.khuta"
+              }
+            }
+          ]
         }
       }
     }
