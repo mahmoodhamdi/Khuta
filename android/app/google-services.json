@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "201439105882",
+    "project_id": "khuta-2332",
+    "storage_bucket": "khuta-2332.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201439105882:android:17fbea8153e468996d5963",
+        "android_client_info": {
+          "package_name": "com.example.khuta"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC00bYeLNp_x0llporiRWnuGvT5nIJcEGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
