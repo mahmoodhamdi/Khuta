@@ -6,6 +6,7 @@ plugins {
 }
 
 android {
+
     namespace = "com.example.khuta"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
@@ -29,6 +30,21 @@ android {
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
+
+    flavorDimensions.add("default")
+
+productFlavors {
+    create("dev") {
+        dimension = "default"
+        resValue("string", "app_name", "Khuta (dev)")
+        applicationIdSuffix = ".dev"
+    }
+    create("prod") {
+        dimension = "default"
+        resValue("string", "app_name", "Khuta")
+    }
+}
+
 
     buildTypes {
         release {
