@@ -106,4 +106,3 @@ flutter run --flavor production
 ## 🤝 Contributing  
 
 We welcome contributions! Feel free to submit issues or pull requests.
-
